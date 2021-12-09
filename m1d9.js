@@ -1,13 +1,13 @@
 window.onload = function () {
 
-createNewNumbers()
+    createNewNumbers()
 
 }
 
 
 
 
-const createNewNumbers = function() {
+const createNewNumbers = function () {
 
     // Find the parent for the days (= month container)
     let numbersContainerNode = document.getElementById("number-container")
@@ -25,28 +25,27 @@ const createNewNumbers = function() {
         newNumbersNode.classList.add("number") // <div class="day">1</div>
 
         numbersContainerNode.appendChild(newNumbersNode)
-        
-        
+
+
 
     }
 }
 
 const extractRandomNumber = function () {
 
-    let randomNumber = Math.floor (Math.random() * 77)
-    let randomNumberNode = document.getElementById("number-container")
-    randomNumberNode.textContent = randomNumber
+    let randomNumber = Math.floor(Math.random() * 77)
+    console.log(randomNumber) 
 
-    let numbersNode = document.getElementsByClassName ("number")
+    let numbersNode = document.getElementById("number-container")
 
     for (i = 0; i < numbersNode; i++) {
 
-        if (randomNumber.toString() === numbersNode[i].innerText) {
+        if (randomNumber.toString === numbersNode[i]) {
 
-            numbersNode[i].classList.add("extractedNumber")
+            numbersNode[i].add.classList("extractedNumber")
         }
     }
-    
+
 
 }
 
