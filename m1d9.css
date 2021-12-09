@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(166, 255, 178);
+    color: white;
+    font-family: 'prata', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    color: #016fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#number-container {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #016fff;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 75%;
+}
+
+.number {
+    background-color: white;
+    display: inline-block;
+    width: 7%;
+    min-height: 40px;
+    text-align: center;
+    padding-top: 8px;
+    font-size: x-large;
+    border-color: #016fff;
+    border-style: solid;
+    border-width: 2px;
+    margin: 3px;
+    border-radius: 10px;
+    color: rgb(0, 153, 20) ;
+}
+
+#generate-number{
+    background-color:#016fff;
+    color: white;
+    border-style: solid;
+    border-width: 3px;
+    width: 20%;
+    height: 40px;
+    border-color: white;
+    cursor: pointer;
+
+} 
+
+.extractedNumber{
+    background-color: #fbff00;
+    
+}
+
+.secondTime{
+     background-color: tomato;
+
+}
