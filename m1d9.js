@@ -9,40 +9,59 @@ window.onload = function () {
 
 const createNewNumbers = function () {
 
-    // Find the parent for the days (= month container)
     let numbersContainerNode = document.getElementById("number-container")
 
-    // TODO: Get the current month, so we can know how many days we need
-    // (just for now, we assume we are in December and we have 31 days)
     let bingoNumbers = 76
 
-    // Within a loop, we create as many days as we need
+    
     for (let numbers = 0; numbers <= bingoNumbers; numbers++) {
 
-        // We create a new DIV element...
-        let newNumbersNode = document.createElement("div") // <div></div>
-        newNumbersNode.innerText = numbers // <div>1</div>
-        newNumbersNode.classList.add("number") // <div class="day">1</div>
+        
+        let newNumbersNode = document.createElement("div") 
+        newNumbersNode.innerText = numbers 
+        newNumbersNode.classList.add("number") 
 
         numbersContainerNode.appendChild(newNumbersNode)
 
-
-
     }
 }
+
+const createCardCont = function () {
+let cardNumber = document.getElementById("card-number").value
+let cardCenter = document.getElementById("last")
+if (parseInt(cardNumber)>0){
+    for(let i=0; i < parseInt(cardNumber); i++){
+    
+    cardCenter.innerHTML = "<div class=card-container></div>"
+}
+}
+}
+const createNewCardNumbers = function () {
+    
+    let numbersContainerNode = document.getElementsByClassName("card-container")
+
+        for(let i = 0; i < 24; i++){
+            let bingoNumbers = Math.floor(Math.random() * 77)
+        let newNumbersNode = document.createElement("div") 
+        newNumbersNode.innerText = bingoNumbers.toString()
+        newNumbersNode.classList.add("number") 
+
+        numbersContainerNode[0].appendChild(newNumbersNode)
+        }
+    }
 
 const extractRandomNumber = function () {
 
     let randomNumber = Math.floor(Math.random() * 77)
     console.log(randomNumber) 
 
-    let numbersNode = document.getElementById("number-container")
+    let numbersNode = document.querySelectorAll(".number")
 
-    for (i = 0; i < numbersNode; i++) {
+    for (i = 0; i < numbersNode.length; i++) {
 
-        if (randomNumber.toString === numbersNode[i]) {
+        if (randomNumber.toString() === numbersNode[i].textContent) {
 
-            numbersNode[i].add.classList("extractedNumber")
+            numbersNode[i].classList.add("extractedNumber")
         }
     }
 

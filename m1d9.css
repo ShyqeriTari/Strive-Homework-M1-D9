@@ -25,6 +25,20 @@ h1 {
     width: 85%;
 }
 
+#card-number{
+    margin-bottom: 40px;
+}
+
+.card-container {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #016fff;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 85%;
+}
+
 .number {
     background-color: white;
     display: inline-block;
@@ -50,6 +64,20 @@ h1 {
     height: 40px;
     border-color: white;
     cursor: pointer;
+    margin-bottom: 40px;
+
+} 
+
+#generate-card{
+    background-color:#016fff;
+    color: white;
+    border-style: solid;
+    border-width: 3px;
+    width: 20%;
+    height: 40px;
+    border-color: white;
+    cursor: pointer;
+    margin-bottom: 40px;
 
 } 
 
